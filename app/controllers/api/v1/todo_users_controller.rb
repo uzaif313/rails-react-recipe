@@ -18,7 +18,7 @@ class Api::V1::TodoUsersController < ApiOriginController
     @todo_user = current_user.todo_users.build(todo_user_params)
 
     if @todo_user.save
-      render json: @todo_user, status: :created, location: @todo_user
+      render json: @todo_user, status: :created
     else
       render json: @todo_user.errors, status: :unprocessable_entity
     end
