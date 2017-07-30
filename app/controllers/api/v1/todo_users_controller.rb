@@ -1,6 +1,6 @@
 class Api::V1::TodoUsersController < ApiOriginController
   before_action :set_todo_user, only: [:show, :update, :destroy]
-  before_action :authenticate_user
+  # before_action :authenticate_user
   # GET /api/v1/todo_users
   def index
     @todo_users = TodoUser.all
